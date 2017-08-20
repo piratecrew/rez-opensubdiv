@@ -1,0 +1,7 @@
+set(opensubdiv_INCLUDE_DIRS $ENV{REZ_OPENSUBDIV_ROOT}/include)
+set(opensubdiv_LIBRARY_DIRS $ENV{REZ_OPENSUBDIV_ROOT}/lib)
+if(opensubdiv_STATIC)
+	set(opensubdiv_LIBRARIES ${opensubdiv_LIBRARY_DIRS}/libosdCPU.a ${opensubdiv_LIBRARY_DIRS}/libosdGPU.a)
+else()
+	set(opensubdiv_LIBRARIES ${opensubdiv_LIBRARY_DIRS}/libosdCPU.so ${opensubdiv_LIBRARY_DIRS}/libosdGPU.so)
+endif()
